@@ -1,0 +1,55 @@
+#aboutme {
+    .title{
+        position: relative;
+
+        button {
+            display: flex;
+            background-color: #5655da;
+            color: #fff;
+            padding: 5px 10px;
+            position: absolute;
+            top: -12px;
+            right: 0;
+        }
+        p {
+            color: #fff;
+        }
+    }
+    .desc{
+        line-height: 28px;
+        margin-top: 30px;
+    }
+    .skills{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+
+        .skill-detail{
+            display: grid;
+            grid-template-columns: 80% 20%;
+            grid-template-areas:
+              "name percent"
+              "pbar pbar";
+
+              .name{
+                grid-area: name;
+              }
+              .percent{
+                text-align: right;
+                grid-area: percent;
+                color: #9c9c9c;
+              }
+              .graph{
+                grid-area: pbar;
+                background-color: #e0e0e0;
+                height: 5px;
+                border-radius: 10px;
+              }
+              .progress{
+                background-color: #f74470;
+                height: 100%;
+                border-radius: 10px 0 0 10px;
+              }
+          }
+        }
+    }

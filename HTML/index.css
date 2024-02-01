@@ -1,0 +1,308 @@
+:root{
+  --secondary-color: #5655da;
+  --primary-color: #2c2c2c;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+aside {
+  background-color: var(--secondary-color);
+  /* background-color: rgb(86, 85, 218);
+    background-color: hsl(240, 64%, 59%); */
+  padding: 40px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var
+  (--primary-text-color)
+}
+
+/* @media screen and (min-width:768px){ */
+.name {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 5px;
+  text-wrap: wrap;
+}
+
+.tab-item {
+  color: #9e9e9e;
+  cursor: pointer;
+}
+
+.tab-item:hover {
+  color: #1a1a1a;
+}
+
+.tab-item::first-letter {
+  font-weight: 700;
+}
+
+.active {
+  color: #1a1a1a;
+}
+
+.contact {
+  margin-bottom: 150px;
+}
+
+input[type="text"] {
+  background-color: gray;
+}
+
+.skills .name {
+  font-size: 14px;
+  color: #1a1a1a;
+  margin: 0;
+  font-weight: normal;
+}
+
+/* section:nth-child(3){
+        position: sticky;
+        top: 20px;
+        bottom: 20px;
+        background-color: #5656da;
+    } */
+
+body {
+  display: flex;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  flex: 1;
+  max-height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 46px;
+}
+
+.profile {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profile > img {
+  border-radius: 50%;
+  width: 165px;
+  height: 165px;
+}
+
+.profile > .detail {
+  padding: 0 10%;
+}
+
+.profile > .job {
+  color: #d8d8e9;
+  font-size: 15px;
+}
+
+.socmed {
+  flex: 1;
+  display: flex;
+}
+
+.socmed .icon {
+  height: 100px;
+  cursor: pointer;
+}
+
+main {
+  flex: 2.8;
+  background-color: #fff;
+  padding: 0 70px;
+}
+
+main > section {
+  padding: 60px 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  width: 100%;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section h1 {
+  color: #f74470;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+#aboutme .title {
+  position: relative;
+}
+
+#aboutme .title button {
+  display: flex;
+  background-color: #5655da;
+  color: #fff;
+  padding: 5px 10px;
+  position: absolute;
+  top: -12px;
+  right: 0;
+}
+
+#aboutme .title p button {
+  color: #fff;
+}
+
+#aboutme .desc {
+  line-height: 28px;
+  margin-top: 30px;
+}
+
+#aboutme .skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* #experience-list .company {
+    padding-top: 10px;
+} */
+
+.skills .skill-detail {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-areas:
+    "name percent"
+    "pbar pbar";
+}
+
+.skill-detail .name {
+  grid-area: name;
+}
+
+.skill-detail .percent {
+  text-align: right;
+  grid-area: percent;
+  color: #9c9c9c;
+}
+
+.skill-detail .graph {
+  grid-area: pbar;
+  background-color: #e0e0e0;
+  height: 5px;
+  border-radius: 10px;
+}
+
+.skill-detail .progress {
+  background-color: #f74470;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+
+.w90 {
+  width: 90%;
+}
+
+.w80 {
+  width: 80%;
+}
+
+.w45 {
+  width: 45%;
+}
+
+.w60 {
+  width: 60%;
+}
+
+#contact .input-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr;
+  grid-template-areas:
+    "name email"
+    "phone subject"
+    "message message";
+  row-gap: 30px;
+  column-gap: 15px;
+}
+
+.input-form input,
+.input-form textarea {
+  padding: 20px 0;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.input-form input:focus,
+.input-form textarea:focus {
+  outline: none;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+
+.input-form textarea {
+  grid-area: message;
+  resize: none;
+}
+
+#contact button {
+  margin-top: 25px;
+  background-color: #5655da;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 2px;
+}
+/* } */
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 35px;
+  }
+
+  aside {
+    padding: 23px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  main {
+    padding: 0 35px;
+  }
+  aside {
+    padding: 23px;
+  }
+}
+
+@media sreen and (max-width: 648px) {
+  aside {
+    display: none;
+  }
+}
